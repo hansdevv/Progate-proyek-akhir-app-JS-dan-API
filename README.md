@@ -1,4 +1,5 @@
 # Progate-proyek-akhir-app-JS-dan-API
+  I made this application to fulfill my final assignment to make an application with Javascript and API in the [Progate](https://progate.com/) course
 ## Procedure to run this repo:
   * Clone
   
