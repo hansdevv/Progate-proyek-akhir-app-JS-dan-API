@@ -7,6 +7,7 @@
   * make your env and activate it
   * install requirements with command `pip install -r requirements.txt`
   * signup account [rapidapi.com](https://rapidapi.com/) and make your key API
+  * Material API [MoviesDatabase](https://rapidapi.com/SAdrian/api/moviesdatabase/)
   * make file **.env** and make variable API-KEY with value your key API
 ## Run App
   with command `py app.py`
