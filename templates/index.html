@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Progate Proyek Akhir Membangun Aplikasi dengan JS dan API</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-12">
+				<div class="card t-2">
+					<div class="card-header">
+						MoviesDatabase From Rapidapi.com
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Dapatkan Data Film</h5>
+						<form id="formParams">
+							<div class="row">
+								<div class="col-6">
+									<label for="selectGenre">Silahkan pilih genre</label>
+									<select class="form-select" id="selectGenre">
+										
+									</select>
+								</div>
+								<div class="col-6">
+									<label for="typeMovie">Silahkan pilih tipe Film</label>
+									<select class="form-select" id="typeMovie">
+	
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<label for="limitFilm">Silahkan pilih jumlah film yang mau ditampilkan</label>
+									<select class="form-select" id="limitFilm">
+										{% for item in range(10) %}
+											<option value="{{item+1}}">{{item+1}}</option>
+										{% endfor %}
+									</select>
+								</div>
+								<div class="col-6">
+									<label for="year">Silahkan masukkan tahun film</label>
+									<input type="text" class="form-control" id="year">
+								</div>
+							</div>
+							<div class="container">
+								<button id="get-data" class="btn btn-outline-info" style="margin-top: 20px;">Dapatkan Data Film</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="movie-list">
+			
+		</div>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
